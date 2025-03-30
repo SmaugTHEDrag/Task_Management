@@ -1,18 +1,10 @@
 package com.example.TaskManagementSystem.entity;
 
 import jakarta.persistence.*;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import java.time.LocalDateTime;
 
 @Entity
-@Getter
-@Setter
-@NoArgsConstructor
-@AllArgsConstructor
 @Table(name = "task_history")
 public class TaskHistory {
     @Id
@@ -33,4 +25,44 @@ public class TaskHistory {
     @ManyToOne
     @JoinColumn(name = "changed_by")
     private User changedBy;
+
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Task getTask() {
+        return task;
+    }
+
+    public void setTask(Task task) {
+        this.task = task;
+    }
+
+    public Status getStatus() {
+        return status;
+    }
+
+    public void setStatus(Status status) {
+        this.status = status;
+    }
+
+    public LocalDateTime getChangedAt() {
+        return changedAt;
+    }
+
+    public void setChangedAt(LocalDateTime changedAt) {
+        this.changedAt = changedAt;
+    }
+
+    public User getChangedBy() {
+        return changedBy;
+    }
+
+    public void setChangedBy(User changedBy) {
+        this.changedBy = changedBy;
+    }
 }
