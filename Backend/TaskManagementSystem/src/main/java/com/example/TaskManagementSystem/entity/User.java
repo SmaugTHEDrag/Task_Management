@@ -1,8 +1,6 @@
 package com.example.TaskManagementSystem.entity;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
@@ -32,14 +30,10 @@ public class User {
     @Column(name = "is_active")
     private boolean isActive = true;
 
-    @Setter
-    @Getter
     @Column(name = "created_at")
     @CreationTimestamp
     private LocalDateTime createdAt;
 
-    @Setter
-    @Getter
     @Column(name = "updated_at")
     @UpdateTimestamp
     private LocalDateTime updatedAt;
@@ -112,5 +106,21 @@ public class User {
 
     public void setTaskHistories(List<TaskHistory> taskHistories) {
         this.taskHistories = taskHistories;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 }
