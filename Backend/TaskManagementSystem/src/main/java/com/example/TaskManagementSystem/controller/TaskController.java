@@ -22,8 +22,8 @@ public class TaskController {
     private ModelMapper modelMapper;
 
     @GetMapping
-    public List<TaskDTO> getAllTask(){
-        List<Task> tasks = taskService.getAllTask();
+    public List<TaskDTO> getAllTasks(){
+        List<Task> tasks = taskService.getAllTasks();
         return modelMapper.map(tasks, new TypeToken<List<TaskDTO>>(){}.getType());
     }
 }

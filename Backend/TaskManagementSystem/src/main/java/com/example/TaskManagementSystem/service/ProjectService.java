@@ -14,7 +14,12 @@ public class ProjectService implements IProjectService{
 
 
     @Override
-    public List<Project> getAllProject() {
+    public List<Project> getAllProjects() {
         return projectRepository.findAll();
+    }
+
+    @Override
+    public Project getProjectById(int id) {
+        return projectRepository.findById(id).orElse(null);
     }
 }

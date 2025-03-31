@@ -22,8 +22,8 @@ public class TaskHistoryController {
     private ModelMapper modelMapper;
 
     @GetMapping
-    public List<TaskHistoryDTO> getAllHistory(){
-        List<TaskHistory> taskHistories = taskHistoryService.getAllHistory();
+    public List<TaskHistoryDTO> getAllHistories(){
+        List<TaskHistory> taskHistories = taskHistoryService.getAllHistories();
         return modelMapper.map(taskHistories, new TypeToken<List<TaskHistoryDTO>>(){}.getType());
     }
 }

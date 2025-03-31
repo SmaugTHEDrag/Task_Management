@@ -12,7 +12,7 @@ public class TaskHistoryService implements ITaskHistoryService{
     @Autowired
     private ITaskHistoryRepository taskHistoryRepository;
     @Override
-    public List<TaskHistory> getAllHistory() {
+    public List<TaskHistory> getAllHistories() {
         return taskHistoryRepository.findAll();
     }
 }

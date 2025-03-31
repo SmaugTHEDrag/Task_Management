@@ -22,8 +22,8 @@ public class ProjectController {
     private ModelMapper modelMapper;
 
     @GetMapping
-    public List<ProjectDTO> getAllProject(){
-        List<Project> projects = projectService.getAllProject();
+    public List<ProjectDTO> getAllProjects(){
+        List<Project> projects = projectService.getAllProjects();
         return modelMapper.map(projects, new TypeToken<List<ProjectDTO>>(){}.getType());
     }
 }

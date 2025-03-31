@@ -12,7 +12,12 @@ public class UserService implements IUserService{
     private IUserRepository userRepository;
 
     @Override
-    public List<User> getAllUser() {
+    public List<User> getAllUsers() {
         return userRepository.findAll();
+    }
+
+    @Override
+    public User getUserById(int id) {
+        return userRepository.findById(id).orElse(null);
     }
 }

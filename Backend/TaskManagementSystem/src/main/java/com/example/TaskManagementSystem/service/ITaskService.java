@@ -5,5 +5,7 @@ import com.example.TaskManagementSystem.entity.Task;
 import java.util.List;
 
 public interface ITaskService {
-    List<Task> getAllTask();
+    List<Task> getAllTasks();
+
+    Task getTaskById(int id);
 }
