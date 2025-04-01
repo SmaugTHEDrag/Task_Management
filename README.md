@@ -24,10 +24,10 @@ Task Management System là một hệ thống quản lý công việc giúp tổ
 - **Tailwind CSS**
 
 ## 📌 Roadmap
-- [x] Xây dựng Backend Spring Boot
+- [ ] Xây dựng Backend Spring Boot
 - [x] Tích hợp JWT Authentication
 - [x] Thiết kế API cho Task Management
-- [x] Tích hợp FastAPI với Whisper AI
+- [ ] Tích hợp FastAPI với Whisper AI và Gemini
 - [x] Xây dựng giao diện với ReactJS
 - [x] Hoàn thiện hệ thống CI/CD
 - [x] Triển khai trên AWS/GCP

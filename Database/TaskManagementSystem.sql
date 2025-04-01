@@ -46,7 +46,7 @@ DROP TABLE IF EXISTS task_history;
 CREATE TABLE task_history (
     id INT AUTO_INCREMENT PRIMARY KEY,
     task_id INT,
-    status ENUM('Pending', 'In Progress', 'Completed') NOT NULL DEFAULT 'Pending',
+    status ENUM('Pending', 'In_Progress', 'Completed') NOT NULL DEFAULT 'Pending',
     changed_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP, 
     changed_by INT,
     FOREIGN KEY (task_id) REFERENCES task(id) ON DELETE CASCADE,
@@ -75,6 +75,6 @@ INSERT INTO task (title, description, status, assigned_to, project_id, priority)
 -- Thêm Task History
 INSERT INTO task_history (task_id, status, changed_by) VALUES
 (1, 'Pending', 2),
-(2, 'In Progress', 3),
+(2, 'In_Progress', 3),
 (3, 'Completed', 2);
 
