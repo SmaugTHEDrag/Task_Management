@@ -8,7 +8,7 @@ import java.util.List;
 public class UserDTO {
 
     private Integer id;
-    private String name;
+    private String username;
     private String email;
     private String role;
     private boolean active;
@@ -61,12 +61,12 @@ public class UserDTO {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
     public String getEmail() {

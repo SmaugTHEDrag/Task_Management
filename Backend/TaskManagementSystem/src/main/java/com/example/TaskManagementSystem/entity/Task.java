@@ -22,7 +22,7 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Status status = Status.Pending;
+    private Status status;
 
     @ManyToOne
     @JoinColumn(name = "assigned_to")
@@ -34,7 +34,7 @@ public class Task {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false)
-    private Priority priority = Priority.Medium;
+    private Priority priority ;
 
 
     @Column(name = "created_at")
@@ -48,6 +48,15 @@ public class Task {
     @OneToMany(mappedBy = "task", cascade = CascadeType.ALL)
     private List<TaskHistory> history;
 
+    @PrePersist
+    public void prePersist(){
+        if(status == null){
+            status = Status.Pending;
+        }
+        if(priority == null){
+            priority = Priority.Medium;
+        }
+    }
     public Integer getId() {
         return id;
     }
